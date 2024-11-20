@@ -9,6 +9,7 @@ def generate_tex(image_dict, output_file="auto_plots.tex"):
         
         # Iterate through the folders in the specified order
         for superfolder, subfolders in image_dict.items():
+            print("superfolder: ", superfolder)
             tex_file.write("\\section{{{0} Plots}}\n\n".format(os.path.basename(superfolder).replace("_", "\\_")))
             
             for subfolder, images in subfolders.items():
